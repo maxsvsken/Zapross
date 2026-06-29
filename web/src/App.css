@@ -1,0 +1,32 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}

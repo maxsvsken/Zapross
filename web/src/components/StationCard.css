@@ -1,0 +1,220 @@
+.station-card {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  bottom: 16px;
+  width: 380px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 60;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background 0.15s;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.station-header {
+  padding: 24px 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.brand-icon {
+  font-size: 36px;
+}
+
+.station-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.station-header .address {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.prices-section {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+}
+
+.prices-section h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.prices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.price-row:hover {
+  background: #f0f1f3;
+}
+
+.fuel-type {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  min-width: 70px;
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.price-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+.price-date {
+  font-size: 11px;
+  color: #999;
+}
+
+.no-price {
+  font-size: 13px;
+  color: #bbb;
+  font-style: italic;
+}
+
+.update-btn {
+  background: none;
+  border: 1px solid #ddd;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.update-btn:hover {
+  background: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+.price-edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.price-edit input {
+  width: 80px;
+  padding: 6px 10px;
+  border: 2px solid #1a73e8;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.save-btn {
+  background: #34a853;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #ea4335;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-footer {
+  padding: 14px 20px;
+  background: #f0f7ff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card-footer p {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .station-card {
+    left: 8px;
+    right: 8px;
+    top: auto;
+    bottom: 8px;
+    width: auto;
+    max-height: 60vh;
+  }
+}
