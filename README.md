@@ -7,8 +7,8 @@
 ```
 zapros/
 ├── backend/          # FastAPI + PostgreSQL + PostGIS
-├── web/              # React + Yandex Maps JS API 3.0
-├── mobile/           # React Native + Yandex MapKit
+├── web/              # React + Leaflet + OpenStreetMap
+├── mobile/           # React Native + Expo + OpenStreetMap
 └── docs/             # Документация
 ```
 
@@ -45,7 +45,6 @@ uvicorn app.main:app --reload --port 8000
 ```bash
 cd web
 npm install
-# Замените YOUR_YANDEX_MAPS_API_KEY в index.html
 npm run dev
 ```
 
@@ -65,7 +64,6 @@ npx expo start
 | GET | `/api/stations/:id` | Детали АЗС с ценами |
 | POST | `/api/stations/:id/prices` | Обновить цену на топливо |
 
-## API ключи
+## Лицензия
 
-- **Yandex Maps API**: Получите на https://developer.tech.yandex.ru/services
-- Замените `YOUR_YANDEX_MAPS_API_KEY` в `web/index.html`
+MIT
