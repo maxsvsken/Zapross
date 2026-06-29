@@ -116,7 +116,7 @@ export default function LeafletMap() {
       disableClusteringAtZoom: 16,
     })
 
-    fetch('/stations.json')
+    fetch(`${import.meta.env.BASE_URL}stations.json`)
       .then(r => r.json())
       .then((geojson: StationGeoJSON) => {
         const markers: L.Marker[] = []
