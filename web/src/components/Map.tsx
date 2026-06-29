@@ -106,7 +106,7 @@ export default function LeafletMap() {
     })
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: '',
       maxZoom: 19,
     }).addTo(map)
 
