@@ -13,7 +13,9 @@ interface StationFeature {
     name: string
     brand: string
     address: string
+    town: string
     fuel_types: string[]
+    prices: Record<string, { price: number; date: string }>
   }
 }
 
@@ -70,14 +72,21 @@ function getBrandColor(brand: string): string {
 
 function buildPopup(props: StationFeature['properties']): string {
   const fuelBadges = props.fuel_types
-    .map(f => `<span class="fuel-badge">${f}</span>`)
-    .join(' ')
+    .map(f => {
+      const priceData = props.prices?.[f]
+      const priceText = priceData ? `${priceData.price.toFixed(2)} ₽` : ''
+      const dateText = priceData?.date ? `<span class="price-date">${priceData.date}</span>` : ''
+      return `<div class="fuel-row"><span class="fuel-badge">${f}</span><span class="fuel-price">${priceText}</span>${dateText}</div>`
+    })
+    .join('')
+
+  const town = props.town ? `${props.town}, ` : ''
 
   return `
     <div class="station-popup">
       <div class="popup-brand">${props.brand}</div>
       ${props.name && props.name !== props.brand ? `<div class="popup-name">${props.name}</div>` : ''}
-      <div class="popup-address">${props.address}</div>
+      <div class="popup-address">${town}${props.address}</div>
       <div class="popup-fuels">${fuelBadges}</div>
     </div>
   `

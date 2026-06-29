@@ -45,8 +45,14 @@
 
 .popup-fuels {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 4px;
+}
+
+.fuel-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .fuel-badge {
@@ -57,4 +63,17 @@
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 10px;
+  white-space: nowrap;
+}
+
+.fuel-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.price-date {
+  font-size: 10px;
+  color: #999;
+  margin-left: auto;
 }
